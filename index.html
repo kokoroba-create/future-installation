@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来インストール - エネルギー層の浄化と未来の周波数インストール</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .header-subtext {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 30px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #2c3e50;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #f39c12;
+      padding-bottom: 15px;
+    }
+
+    section h3 {
+      color: #2c3e50;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    section h4 {
+      color: #2c3e50;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    section p {
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    /* ===== 定義セクション ===== */
+    .definition-box {
+      background: #f9f9f9;
+      border-left: 4px solid #f39c12;
+      padding: 25px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .definition-box p {
+      margin-bottom: 10px;
+    }
+
+    .definition-box strong {
+      color: #f39c12;
+    }
+
+    /* ===== リスト ===== */
+    ul {
+      margin-left: 20px;
+      color: #666;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    /* ===== プラン比較表 ===== */
+    .plan-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .plan-card {
+      flex: 1;
+      min-width: 280px;
+      background: white;
+      border: 2px solid #f39c12;
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .plan-card h4 {
+      color: #f39c12;
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .plan-duration {
+      color: #2c3e50;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .plan-content {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .plan-price {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .plan-price p:first-child {
+      color: #999;
+      font-size: 0.85rem;
+      margin-bottom: 5px;
+    }
+
+    .price-amount {
+      color: #f39c12;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* ===== セッション中に起こること ===== */
+    .session-reactions {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+
+    .session-reactions h4 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    .session-reactions ul {
+      margin-bottom: 0;
+    }
+
+    /* ===== セッション流れ ===== */
+    .process-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .process-card {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border: 2px solid #f39c12;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .process-card h4 {
+      color: #f39c12;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .process-card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-item {
+      background: #f9f9f9;
+      border-left: 4px solid #2196F3;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .faq-item strong {
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    /* ===== クライアントの声 ===== */
+    .testimonial-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-left: 4px solid #f39c12;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .testimonial-name {
+      text-align: right;
+      color: #999;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ===== 次のステップ ===== */
+    .next-steps {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .next-step-item {
+      margin-bottom: 30px;
+    }
+
+    .next-step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .next-step-item h4 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    .next-step-link {
+      color: #f39c12;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .next-step-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== CTA セクション ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px auto;
+      max-width: 100%;
+    }
+
+    .cta-section h2 {
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: none;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: #f39c12;
+      color: white;
+      padding: 20px 50px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #e67e22;
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      color: white;
+      margin: 0;
+    }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .plan-container,
+      .process-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ヘッダー（修正版）===== -->
+<header>
+  <h1>🌟 未来インストール</h1>
+  <p>あなたの理想の未来を、<br>エネルギーレベルで確実にセットする</p>
+  <div class="header-subtext">
+    <p style="font-size: 1.2rem; margin-bottom: 15px;">
+      <strong>まずは ¥22,000 からスタート</strong>
+    </p>
+    <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 20px;">
+      気軽に体験して、必要に応じてステップアップ
+    </p>
+    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 15px;">
+      スタンダード・インテンシブプランもご用意 ▼
+    </p>
+  </div>
+</header>
+
+<!-- ===== 未来インストールとは ===== -->
+<section>
+  <h2>未来インストールとは</h2>
+  <div class="definition-box">
+    <p><strong>エネルギー層の浄化と未来の周波数インストール</strong></p>
+    <p>未来インストールは、あなたのエネルギー層（潜在意識レベル）を深掘りし、覚醒ワーク受講済みでも見つけられないような<strong>根深いブロックや制限</strong>を、ハイヤーセルフの許可のもと全て削除します。</p>
+    <p style="margin-top: 15px;">その後、<strong>理想の未来のエネルギー周波数</strong>をあなたの層に導入。</p>
+    <p style="margin-top: 15px;">結果、潜在意識が「この周波数が私の現実」と認識するようになり、<strong>自然にそこへ進める状態</strong>になります。</p>
+  </div>
+
+  <h3>こんなお悩みをお持ちですか？</h3>
+  <ul>
+    <li>頭では「こうなりたい」と理解しているのに、体が動かない</li>
+    <li>何度もチャレンジしても、同じパターンで失敗してしまう</li>
+    <li>覚醒ワークを受けたけど、まだ何か手放せていない感覚がある</li>
+    <li>潜在意識レベルでの深いブロック解放をしたい</li>
+    <li>理想の未来へ、「努力」ではなく「自然に」進みたい</li>
+  </ul>
+</section>
+
+<!-- ===== セッション中に起こること ===== -->
+<section>
+  <h2>セッション中に起こる変化</h2>
+  <div class="session-reactions">
+    <h4>エネルギーが動いている証</h4>
+    <p>エネルギー層を扱うため、セッション中・セッション後に以下のような反応が起こる場合があります。これらは全て<strong>変化が起こっている自然な反応</strong>です。</p>
+    <ul>
+      <li><strong>頭がクリアになる、または頭がボーッとする</strong> – エネルギーシフトに伴う意識の変化</li>
+      <li><strong>涙が出る</strong> – 感情の放出・解放のプロセス</li>
+      <li><strong>無性に笑いが込み上げる</strong> – 軽くなったエネルギーの表現</li>
+      <li><strong>フワフワした感覚や眠気</strong> – 深いリラックス状態への移行</li>
+      <li><strong>周囲の空気が変わる感覚</strong> – あなたのエネルギーフィールドの変容</li>
+      <li><strong>セッション直後は軽さを感じるが、数時間～数日後に眠気が増す</strong> – エネルギーの統合・定着プロセス</li>
+    </ul>
+    <p style="margin-top: 15px; font-size: 0.95rem; color: #666;">これらの反応は「良い反応」です。無理に何かしようとせず、自然に任せてください。</p>
+  </div>
+</section>
+
+<!-- ===== 3つのプラン ===== -->
+<section>
+  <h2>3つのプラン</h2>
+  <div class="plan-container">
+    <div class="plan-card">
+      <h4>お試し</h4>
+      <div class="plan-duration">1つ / 30分</div>
+      <div class="plan-content">まず体験してみたい、1つのブロックだけ解放したい方向け。未来インストールがどのようなものか、まずは気軽に試してみられます。</div>
+      <div class="plan-price">
+        <p>投資</p>
+        <div class="price-amount">¥22,000</div>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <h4>スタンダード</h4>
+      <div class="plan-duration">3つまで / 60分</div>
+      <div class="plan-content">複数のブロック・制限を解放したい、本格的に変わりたい方向け。複数のエネルギーを浄化・インストールすることで、より大きな変化が期待できます。</div>
+      <div class="plan-price">
+        <p>投資</p>
+        <div class="price-amount">¥66,000</div>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <h4>インテンシブ</h4>
+      <div class="plan-duration">層丸ごと / 90分</div>
+      <div class="plan-content">人生を根本から変えたい、全てのブロックを手放したい方向け。あなたのエネルギー層全体を徹底的に浄化・インストールします。最も深い変容が期待できます。</div>
+      <div class="plan-price">
+        <p>投資</p>
+        <div class="price-amount">¥110,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== セッションの流れ ===== -->
+<section>
+  <h2>セッションの流れ</h2>
+  <div class="process-container">
+    <div class="process-card">
+      <h4>STEP 1</h4>
+      <p>事前ヒアリング</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 2</h4>
+      <p>エネルギー層の診断</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 3</h4>
+      <p>浄化・インストール</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 4</h4>
+      <p>フィードバック</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== よくある質問 ===== -->
+<section>
+  <h2>よくある質問</h2>
+  <div class="faq-item">
+    <strong>Q: 覚醒ワークを受けてるのに、なぜ未来インストールが必要？</strong>
+    <p>覚醒ワークで気づきと基礎が得られますが、自分では見つけられない深いブロックがあります。未来インストールは、ハイヤーセルフの視点から根本的に浄化・インストールするため、より深い変化が可能になります。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: 眠くなったり、フワフワしたら大丈夫？</strong>
+    <p>はい、大丈夫です。これはエネルギーが動いている証で、自然な反応です。無理に何かしようとせず、その状態をそのまま受け入れてください。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: セッション後、どのくらいで変化を感じるか？</strong>
+    <p>個人差がありますが、セッション直後は軽さを感じる方が多いです。その後、数日～1週間をかけてエネルギーが統合・定着し、より深い変化が現れます。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: セッションはオンライン？</strong>
+    <p>はい、Zoom での個別オンラインです。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: どのプランを選べばいい？</strong>
+    <p>無料個別相談会で、あなたの状況に合わせた最適なプランをご提案します。</p>
+  </div>
+</section>
+
+<!-- ===== クライアントの声 ===== -->
+<section>
+  <h2>クライアントの声</h2>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「セッション中、涙が止まりませんでした。その後、重かった身体が軽くなり、3日間ぐっすり眠りました。眠った後、見え方が完全に変わっていて驚きました。」</p>
+    <p class="testimonial-name">— G さん</p>
+  </div>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「自分では気づかなかった深いブロックを見つけてもらえました。インストール後、自然に次のステップへ進める感覚になり、努力している感覚が消えました。」</p>
+    <p class="testimonial-name">— H さん</p>
+  </div>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「セッション中、笑いが込み上げて、その後フワフワが続きました。眠気も強かったけど、統合するにつれて本当に変わった感覚が。これは本物だと確信しました。」</p>
+    <p class="testimonial-name">— I さん</p>
+  </div>
+</section>
+
+<!-- ===== 次のステップ ===== -->
+<section>
+  <div class="next-steps">
+    <h3 style="color: #2c3e50; margin-top: 0;">次に進むべきステップ</h3>
+
+    <div class="next-step-item">
+      <h4>🌟 総合鑑定でさらに深掘りしたい方</h4>
+      <p>未来インストールでエネルギー層が浄化された後、総合鑑定で「あなたの才能・使命」をより深く理解することで、さらに確実に前に進めます。</p>
+      <a href="https://kokoroba-create.github.io/comprehensive-divination/" class="next-step-link">▶ 総合鑑定を見る</a>
+    </div>
+
+    <div class="next-step-item">
+      <h4>🔥 実行力を磨きたい方</h4>
+      <p>未来インストールで浄化された状態で、能力覚醒ブートキャンプを受けると、より深く、より早く変化が定着します。</p>
+      <a href="https://kokoroba-create.github.io/bootcamp/" class="next-step-link">▶ ブートキャンプを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>エネルギーレベルで<br>根本から変わりませんか？</h2>
+  <p style="margin-bottom: 30px;">覚醒ワークでも見つけられないブロックを削除し、理想の未来周波数をインストール。自然に前に進める状態へ。</p>
+  <p style="margin-bottom: 30px; color: rgba(255, 255, 255, 0.9);">まずは無料個別相談会で、あなたに最適なプランをご確認ください。</p>
+  <a href="https://lit.link/Kakuei_reina" class="cta-button">無料個別相談会に申し込む</a>
+</section>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <p>&copy; 2026 未来インストール All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
